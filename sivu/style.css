@@ -1,15 +1,36 @@
 h1 {
   color: #FFF;
   font-size: 2em;
-  padding-top: 100px;
-  padding-left:100px; 
-  width: 100%;
+  padding: 100px 0;
   font-family: Georgia;
-  text-align: center;
-}
-h2 {
-    color:#FFF;
-    font-size: 1em; 
-    font-family: Georgia;
 }
 
+h2 {
+  color: #FFF;
+  font-size: 1em; 
+  font-family: Georgia;
+
+}
+/*Taustaväri*/
+body {
+  background-color: gold;
+  font-family: Arial;
+}
+
+/* Galleria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
+
+/* Galleria tyyli */
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+/* Center class */
+.center {
+  text-align: center;
+}
