@@ -1,22 +1,37 @@
 h1 {
-  color: #000000;
+  color: black;
   font-size: 2em;
   font-family: Georgia;
   text-align: center;
 }
 
 h2 {
-  color: #000000;
+  color:black ;
   font-size: 1em; 
   font-family: Georgia;
   text-align: center;
 }
+
+h3 {
+    color: white; 
+    font-size: 2em;
+    font-family: Georgia;
+    text-align: center;
+
+}
+li{
+  color:white;
+
+}
+
+
+
 /*Taustaväri*/
 body {
   
     background-image: url('kuvat/thumbnail_image.jpg'); /* Kuva tiedosto */
     background-size: cover; /* Kuvan koko */
-    background-repeat: no-repeat; /* estää kuvaa toistuvasti näkymästä */
+    background-repeat: no-repeat; /* estää kuvaa toistuvasti päivittymästä  */
 
   font-family: Arial;
 }
