@@ -13,7 +13,11 @@ h2 {
 }
 /*Taustaväri*/
 body {
-  background-color: gold;
+  
+    background-image: url('thumbnail_image.jpg'); /* Kuva tiedosto */
+    background-size: cover; /* Kuvan koko */
+    background-repeat: no-repeat; /* estää kuvaa toistuvasti näkymästä */
+
   font-family: Arial;
 }
 
@@ -58,7 +62,6 @@ body {
   bottom: 0;
   text-align:center;
   width: 100%;
-  background-color: gold;
   padding: 20px;
   box-sizing: border-box;
 }
