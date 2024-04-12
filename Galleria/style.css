@@ -13,7 +13,7 @@ h2 {
 }
 /*Taustaväri*/
 body {
-  background-color: gold;
+  background-color: rgba(255, 230, 0, 0.712);
   font-family: Arial;
 }
 
@@ -51,7 +51,7 @@ div.desc {
 /* Tyyli*/
 body {
   position: relative; 
-  margin-bottom: 150px; 
+  margin-bottom: 25px; 
 }
 #contact-list {
   position: fixed; /* Sijainti alhaalla  */
@@ -68,5 +68,42 @@ ul {
   margin: 0;
 }
 li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+.logo {
+  position: absolute;
+  top: 1px;
+  left: 0px;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.logo-container {
+  width: 200px; /* Adjust the width according to your logo size */
+  position: relative;
+}
+
+.navigation {
+  position: absolute;
+  left: 0;
+  bottom: 50; /* Adjust as needed */
+  text-align: left;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navigation li:last-child {
+  margin-right: 0;
 }
