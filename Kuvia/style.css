@@ -1,0 +1,72 @@
+h1 {
+  color: #000000;
+  font-size: 2em;
+  font-family: Georgia;
+  text-align: center;
+}
+
+h2 {
+  color: #000000;
+  font-size: 1em; 
+  font-family: Georgia;
+  text-align: center;
+}
+/*Taustaväri*/
+body {
+  background-color: gold;
+  font-family: Arial;
+}
+
+/* Galleria */
+.gallery-container {
+  margin: 0 auto; /* Keskittää gallerian vaakasuunnassa */
+  width: 80%; /* Määrittää gallerian leveyden 80% näytön leveydestä */
+  display: flex; /* Käyttää joustavia bokseja */
+  flex-wrap: wrap; /* Käärii boksit riveille tarvittaessa */
+  justify-content: center; /* Keskittää boksit vaakasuunnassa */
+}
+
+/* Galleria tyyli */
+.gallery {
+  width: 15%; /* Määrittää kuvan leveyden galleriassa */
+  margin: 0 10px; /* Asettaa välimatkan kuvien välille */
+  box-sizing: border-box; /* Huomioi reunukset ja täyttö */
+}
+
+.gallery img {
+  width: 100%; /* Asettaa kuvan leveyden 100% gallerian leveydestä */
+  height: auto; /* Säilyttää kuvan alkuperäisen korkeuden suhteessa leveyteen */
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    width: 100%; /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+  }
+}
+div.desc {
+  padding: 15px; /* Asettaa sisennyksen kuvauksiin */
+  text-align: center; /* Keskittää kuvauksen tekstisisällön */
+}
+
+/* Tyyli*/
+body {
+  position: relative; 
+  margin-bottom: 150px; 
+}
+#contact-list {
+  position: fixed; /* Sijainti alhaalla  */
+  bottom: 0;
+  text-align:center;
+  width: 100%;
+  background-color: gold;
+  padding: 20px;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 10px;
+}
