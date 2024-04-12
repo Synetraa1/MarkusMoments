@@ -32,8 +32,41 @@ body {
   margin: 0 10px; /* Asettaa välimatkan kuvien välille */
   box-sizing: border-box; /* Huomioi reunukset ja täyttö */
 }
-/* Center class */
-.center {
-  text-align: center;
+
+.gallery img {
+  width: 100%; /* Asettaa kuvan leveyden 100% gallerian leveydestä */
+  height: auto; /* Säilyttää kuvan alkuperäisen korkeuden suhteessa leveyteen */
 }
 
+@media screen and (max-width: 600px) {
+  .gallery {
+    width: 100%; /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+  }
+}
+div.desc {
+  padding: 15px; /* Asettaa sisennyksen kuvauksiin */
+  text-align: center; /* Keskittää kuvauksen tekstisisällön */
+}
+
+/* Tyyli*/
+body {
+  position: relative; 
+  margin-bottom: 150px; 
+}
+#contact-list {
+  position: fixed; /* Sijainti alhaalla  */
+  bottom: 0;
+  text-align:center;
+  width: 100%;
+  background-color: gold;
+  padding: 20px;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 10px;
+}
