@@ -54,7 +54,7 @@ body {
   margin-bottom: 150px; 
 }
 #contact-list {
-  position: fixed; /* Sijainti alhaalla  */
+  position: bottom; /* Sijainti alhaalla  */
   bottom: 0;
   text-align:center;
   width: 100%;
