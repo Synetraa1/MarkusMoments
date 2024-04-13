@@ -6,36 +6,49 @@ h1 {
 }
 
 h2 {
-  color: #000000;
-  font-size: 1em; 
-  font-family: Georgia;
+  color: #ffffff;
+  font-size: 3em; 
+  font-family: Verdana;
   text-align: center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+}
+.desc {
+  color: #ffffff;
+  font-size: 1em; 
+  font-family: Verdana;
+  text-align: center;
+  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
 }
 /*Taustaväri*/
 body {
-  background-color: rgba(255, 230, 0, 0.712);
-  font-family: Arial;
+  background-image: url('kuvat/thumbnail_image.jpg'); /* Kuva tiedosto */
+  background-size: cover; /* Kuvan koko */
+  background-repeat: no-repeat; /* estää kuvaa toistuvasti päivittymästä  */
+  position: fixed;
 }
 
 /* Galleria */
 .gallery-container {
   margin: 0 auto; /* Keskittää gallerian vaakasuunnassa */
-  width: 80%; /* Määrittää gallerian leveyden 80% näytön leveydestä */
+  width: 100%; /* Määrittää gallerian leveyden 100% näytön leveydestä */
   display: flex; /* Käyttää joustavia bokseja */
   flex-wrap: wrap; /* Käärii boksit riveille tarvittaessa */
   justify-content: center; /* Keskittää boksit vaakasuunnassa */
+  z-index:1;
 }
 
 /* Galleria tyyli */
 .gallery {
-  width: 15%; /* Määrittää kuvan leveyden galleriassa */
+  width: 18%; /* Määrittää kuvan leveyden galleriassa */
   margin: 0 10px; /* Asettaa välimatkan kuvien välille */
   box-sizing: border-box; /* Huomioi reunukset ja täyttö */
+  z-index:1;
 }
 
 .gallery img {
   width: 100%; /* Asettaa kuvan leveyden 100% gallerian leveydestä */
   height: auto; /* Säilyttää kuvan alkuperäisen korkeuden suhteessa leveyteen */
+  z-index:1;
 }
 
 @media screen and (max-width: 600px) {
@@ -46,64 +59,60 @@ body {
 div.desc {
   padding: 15px; /* Asettaa sisennyksen kuvauksiin */
   text-align: center; /* Keskittää kuvauksen tekstisisällön */
+  z-index:1;
 }
-
-/* Tyyli*/
-body {
-  position: relative; 
-  margin-bottom: 25px; 
-}
-#contact-list {
-  position: fixed; /* Sijainti alhaalla  */
-  bottom: 0;
-  text-align:center;
-  width: 100%;
-  background-color: gold;
-  padding: 20px;
-  box-sizing: border-box;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-li {
-  margin-bottom: 5px;
-}
-.logo {
-  position: absolute;
-  top: 1px;
-  left: 0px;
-}
-
-.logo img {
-  width: 200px;
-  height: auto;
-}
-
-.logo-container {
-  width: 200px; /* Adjust the width according to your logo size */
-  position: relative;
-}
-
-.navigation {
-  position: absolute;
-  left: 0;
-  bottom: 50; /* Adjust as needed */
-  text-align: left;
-}
-
+/* Asetukset navigaatiolle */
 .navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none; /* Poista luettelomerkinnät */
+  margin: 0; /* Nollaa marginaali */
+  padding: 0; /* Nollaa sisennys */
+  overflow: hidden; /* Estä sisällön ylivuoto */
+  background-color: #000000;
 }
-
-.navigation li {
-  display: inline-block;
-  margin-right: 20px;
+.navigation li{
+  display: inline-block; /* Näytä listaelementit vierekkäin */
+  float:left;
+}
+/* Asetukset navigaation linkeille */
+ .navigation a{
+  display: block;
+  padding: 16px;
+  background-color: #141414;
+  text-align:center;
+  text-decoration:none; /* Poistaa linkkien alleviivaus */
+}
+.navigation li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
 }
 
 .navigation li:last-child {
   margin-right: 0;
+}
+/* Asetukset navigaatiolle */
+.navigation {
+  position:fixed;/* Aseta sijainti kiinteäksi */
+  bottom:0px;/* Aseta sijainti alareunaan */
+  left:0px;
+  width:100%;
+  text-align:center;/* Keskitä navigaatio */
+}
+
+.navigation ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo{ /*Logon asetuksia*/
+  display:inline-block; /* Näytä logo rinnakkain muiden elementtien kanssa */
+  height:20px;
+  margin:0px;
+}
+.logo img{
+  height:100%;/* Aseta kuvan korkeus 100%:iin */
+  width:100px;/* Aseta kuvan leveys */
 }
