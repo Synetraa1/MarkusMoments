@@ -6,49 +6,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<script src="navbar.js"></script> 
+<!--Linkki Java filuun-->
+
 <body>
   <!--Navigation Bar-->
-    <nav class="navigation">
-      <ul>
-        <li><a href="https://nicholashickmankeuda.github.io/MarkusMoments/Home/">Koti</a></li> <!--Koti linkki, ohjaa kotisivulle-->
-        <li><a href="https://nicholashickmankeuda.github.io/MarkusMoments/Galleria/">Galleria</a></li><!--Galleria linkki, ohjaa Galleria sivulle-->
-        <li><a href="/MarkusMoments/Yhteystiedot/">Yhteystiedot</a></li> <!--Yhteystiedot linkki, ohjaa Yhteystieto sivulle-->
-        <li style="float:right"><a class="logo" a href="https://nicholashickmankeuda.github.io/MarkusMoments/Home/"><img src="kuvat/logo 3.png" alt="Logo"></a> <!--Logo joka tulee ohjaamaan koti sivuille painamalla-->
-      </ul>
-    </nav>
-    <h1></h1>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="https://nicholashickmankeuda.github.io/MarkusMoments/Home/">Koti</a>
+    <a href="https://nicholashickmankeuda.github.io/MarkusMoments/Galleria/">Galleria</a>
+    <a href="https://nicholashickmankeuda.github.io/MarkusMoments/Yhteystiedot/">Yhteystiedot</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <h2></h2>
+    <p></p>
+  </div>
+
+<!--Kuva galleria-->
   <h2>Galleria</h2>
-  <!--Kuva gallerian aloitus-->
-  <div class="gallery-container"> <!--Kuvat jonku asteiseen laatikkoon-->
+  <div class="gallery-container"> 
+    <!--Kuvat jonku asteiseen laatikkoon-->
+
+    <div class="gallery">
+      <a href="Wedding.webp">
+        <img src="kuvat/Wedding.webp" alt="Hää pariskunta"></a>
+      <div class="desc">Hää Kuva</div>
+      <!--Kuvailu teksti kuvan alla. Vapaata riistaa voi muokkaa-->
+    </div>
+
+    <div class="gallery">
+      <a href="Family.webp">
+        <img src="kuvat/Family.webp" alt="Iloinen perhe kuva"></a>
+      <div class="desc">Iloinen perhe kuva</div>
+      <!--Kuvailu teksti kuvan alla. Vapaata riistaa voi muokkaa-->
+    </div>
+
+    <div class="gallery">
+      <a href="kuvat/Crowd.webp">
+        <img src="kuvat/Crowd.webp" alt="Yleisö"></a>
+      <div class="desc">Kuva vilkkaasta yleisöstä</div>
+      <!--Kuvailu teksti kuvan alla. Vapaata riistaa voi muokkaa-->
+    </div>
+
   <div class="gallery">
-    <!-- Ensimmäinen kuva alt textiä saa vaihdella halutessaan.-->
     <a href="kuvat/projekti 1.webp">
-      <img src="kuvat/projekti 1.webp" alt="Hymyilevä Markus">
-    </a>
+      <img src="kuvat/projekti 1.webp" alt="Hymyilevä Markus"></a>
     <div class="desc">Markus on iloinen</div>
     <!--Kuvailu teksti kuvan alla. Vapaata riistaa voi muokkaa-->
   </div>
+
   <div class="gallery">
-<!-- Toinen kuva alt textiä saa vaihdella halutessaan.-->
     <a href="kuvat/projekti 2.webp">
-      <img src="kuvat/projekti 2.webp" alt="Vuorista kuva">
-      <!-- Toinen kuva alt textiä saa vaihdella halutessaan.-->
-    </a>
+      <img src="kuvat/projekti 2.webp" alt="Vuorista kuva"></a>
     <div class="desc">Kuva vuorien päältä, vaellukselta.</div>
     <!--Kuvailu teksti kuvan alla. Vapaata riistaa voi muokkaa-->
   </div>
+
   <div class="gallery">
-          <!-- Kolmas kuva alt textiä saa vaihdella halutessaan.-->
     <a href="kuvat/projekti 3.webp">
-      <img src="kuvat/projekti 3.webp" alt="Abstrakti värillinen kuva">
-    </a>
+      <img src="kuvat/projekti 3.webp" alt="Abstrakti värillinen kuva"></a>
     <div class="desc">Abstrakti kuva kaupungin seinistä.</div>
     <!--Kuvailu teksti kuvan alla. Vapaata riistaa voi muokkaa-->
   </div>
+
+  <!--Logon asetus sivustolle-->
+  <div class="logo">
+      <img src="kuvat/logo 3.jpg" alt="Logo">
+  </div>
+
 </body>
 </head>
-
-    
 </div>
     </ul>
   </div>

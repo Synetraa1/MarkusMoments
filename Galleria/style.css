@@ -7,17 +7,18 @@ h1 {
 
 h2 {
   color: #ffffff;
-  font-size: 3em; 
+  font-size: 3.5em; 
   font-family: Verdana;
   text-align: center;
   text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  margin-top:30px;
 }
 .desc {
   color: #ffffff;
   font-size: 1em; 
   font-family: Verdana;
   text-align: center;
-  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
+  text-shadow: 2px 2px 3px black; /* Tekstille varjo, helpompaa lukea  */
 }
 /*Taustaväri*/
 body {
@@ -29,16 +30,18 @@ body {
 /* Galleria */
 .gallery-container {
   margin: 0 auto; /* Keskittää gallerian vaakasuunnassa */
-  width: 100%; /* Määrittää gallerian leveyden 100% näytön leveydestä */
+  width: 50%; /* Määrittää gallerian leveyden 100% näytön leveydestä */
   display: flex; /* Käyttää joustavia bokseja */
   flex-wrap: wrap; /* Käärii boksit riveille tarvittaessa */
-  justify-content: center; /* Keskittää boksit vaakasuunnassa */
+  justify-content: space-between; /* Keskittää boksit vaakasuunnassa */
   z-index:1;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 /* Galleria tyyli */
 .gallery {
-  width: 18%; /* Määrittää kuvan leveyden galleriassa */
+  width: calc(33.33% - 20px); /* Määrittää kuvan leveyden galleriassa */
   margin: 0 10px; /* Asettaa välimatkan kuvien välille */
   box-sizing: border-box; /* Huomioi reunukset ja täyttö */
   z-index:1;
@@ -52,7 +55,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .gallery {
-    width: 100%; /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    width: calc(50% - 20px);; /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
   }
 }
 div.desc {
@@ -60,58 +63,88 @@ div.desc {
   text-align: center; /* Keskittää kuvauksen tekstisisällön */
   z-index:1;
 }
-/* Asetukset navigaatiolle */
-.navigation ul {
-  list-style-type: none; /* Poista luettelomerkinnät */
-  margin: 0; /* Nollaa marginaali */
-  padding: 0; /* Nollaa sisennys */
-  overflow: hidden; /* Estä sisällön ylivuoto */
-  background-color: #000000;
+
+*{
+  padding: 0;
+  margin: 0;
 }
-.navigation li{
-  display: inline-block; /* Näytä listaelementit vierekkäin */
-  float:left;
+
+/* Sivu burgeri baari */
+.sidebar {
+  height: 17%; /* Sivubaarin korkeus, 17% sopi hyvin meijän linkkeihin */
+  width: 0; /* Leveys, tää pitää javalla vaihdella */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #000000; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
 }
-/* Asetukset navigaation linkeille */
- .navigation a{
-  display: block;
-  padding: 16px;
-  background-color: #141414;
-  text-align:center;
-  text-decoration:none; /* Poistaa linkkien alleviivaus */
-}
-.navigation li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
+
+/* Sivu burgerin linkit */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
 }
 
-.navigation li:last-child {
-  margin-right: 0;
-}
-/* Asetukset navigaatiolle */
-.navigation {
-  position:fixed;/* Aseta sijainti kiinteäksi */
-  bottom:0px;/* Aseta sijainti alareunaan */
-  left:0px;
-  width:100%;
-  text-align:center;/* Keskitä navigaatio */
+/* Mouseoveri väritys*/
+.sidebar a:hover {
+  color: #ffd000;
 }
 
-.navigation ul {
-    position: fixed;
-    top: 0;
-    width: 100%;
+/* Sivuburgeri ylä oikealle */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-.logo{ /*Logon asetuksia*/
-  display:inline-block; /* Näytä logo rinnakkain muiden elementtien kanssa */
-  height:20px;
-  margin:0px;
+/* Sulkemis nappula */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed; 
+  top: 10px; /* Ylhäälle siirtäminen */
+  right: 10px; /* Oikealle siirtäminen */
 }
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s; /* Viive avaukseen */
+  padding: 20px;
+}
+
+/* Pienimmille näytöille huomiota */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.logo {
+  position:absolute;
+  width: 250px;
+  height: 150px;
+  top: 10px;
+  left: 10px;
+}
+
 .logo img{
-  height:100%;/* Aseta kuvan korkeus 100%:iin */
-  width:100px;/* Aseta kuvan leveys */
+  width: 100%;
+  height: auto;
+
 }
