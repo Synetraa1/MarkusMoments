@@ -55,7 +55,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .gallery {
-    width: calc(80% - 5px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    width: calc(95% - 5px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
   }
 
   .gallery img{
