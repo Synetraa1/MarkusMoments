@@ -55,7 +55,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .gallery {
-    width: calc(75% - 30px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
   }
 }
 div.desc {
@@ -148,6 +148,10 @@ div.desc {
   height: auto;
 }
 @media screen and (max-height: 450px) {
-  .logo {padding-top: 15px;}
-  .logo img {font-size: 18px;}
+  .logo {
+    width: 200px; 
+    height: 120px; 
+    top: 5px; 
+    left: 5px; 
+  }
 }
