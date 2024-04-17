@@ -57,6 +57,10 @@ body {
   .gallery {
     width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
   }
+
+  .gallery.img{
+    width:100%
+  }
 }
 div.desc {
   padding: 15px; /* Asettaa sisennyksen kuvauksiin */
@@ -74,7 +78,7 @@ div.desc {
   height: 25%; /* Sivubaarin korkeus, 25% sopi hyvin meijän linkkeihin */
   width: 0; /* Leveys, tää pitää javalla vaihdella */
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   right: 0;
   background-color: #000000; 
