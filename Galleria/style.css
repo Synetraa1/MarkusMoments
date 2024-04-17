@@ -41,7 +41,7 @@ body {
 
 /* Galleria tyyli */
 .gallery {
-  width: calc(33.33% - 20px); /* Määrittää kuvan leveyden galleriassa */
+  width:25%; /* Määrittää kuvan leveyden galleriassa */
   margin: 0 10px; /* Asettaa välimatkan kuvien välille */
   box-sizing: border-box; /* Huomioi reunukset ja täyttö */
   z-index:1;
@@ -146,5 +146,8 @@ div.desc {
 .logo img{
   width: 100%;
   height: auto;
-
+}
+@media screen and (max-height: 450px) {
+  .logo {padding-top: 15px;}
+  .logo img {font-size: 18px;}
 }
