@@ -165,8 +165,8 @@ li {
   position:absolute;
   width: 250px;
   height: 150px;
-  top: 10px;
-  left: 10px;
+  top: 5px;
+  left: 5px;
 }
 
 .logo img{
@@ -176,6 +176,9 @@ li {
 @media screen and (max-width: 600px) {
   .logo {
     width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    top: 10px; 
+    left: 10px; 
+    padding: 0; 
   }
 
   .logo img{
