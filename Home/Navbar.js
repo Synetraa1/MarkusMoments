@@ -1,4 +1,3 @@
-
 /* Sivu burgerin leveys */
 function openNav() {
     document.getElementById("mySidebar").style.width = "225px";
