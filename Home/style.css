@@ -252,17 +252,17 @@ h3{
 }
 
 /* Linkit sarake*/
-#links ul{
+#links ul{ /*Tässä päätetään listan tyyli ja tyyppi, eli onko listassa palloja tai numeroita. Tässä ei ole kumpaakaan näistä eli "none".*/
   list-style-type: none;
   color: #ffff;
 }
 a:link {
-  color: #ffff;
+  color: #ffff; /*Linkin väri*/
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: none; /*Tekstin koristelu esim. cursive tai alaviivattu teksti, tässä ei ole mitään koristelua*/
 }
 a:visited {
-  color: #ffff;
+  color: #ffff; /*Väri mikä jää linkin väriksi kun linkkiä on klikattu*/
   background-color: transparent;
   text-decoration: none;
 }
@@ -271,31 +271,31 @@ a:hover {
   color: #d4af37;
   background-color: transparent;
   text-decoration: none;
-  transition: .5s;
+  transition: .5s; /*Hover efektin aika*/
 }
 /* Sometili sarake */
 #social svg{
   margin-right: 20px; /* Luo väliä SVG-kuvien välille */
 }
 #social svg a{
-  fill: #FFFFFF;
+  fill: #FFFFFF; /*Tämä täyttää sosiaalisen median svg kuvat valkoisella*/
 }
 
-#social svg a:hover{
+#social svg a:hover{ /*Median svg kuvien hover efekti. Värinä kulta ja aika 0.5 sekuntia*/
   fill: #d4af37;
   transition: .5s;
 }
 
 /*Alarivi*/
 
-#copyright .col{
+#copyright .col{ /*Alarivin väri ja koko asetukset*/
   background-color: #d4af37;
   color: #191919;
   padding-top: 20px; 
   padding-bottom: 20px;
 }
 
-#footer {
+#footer { /*Footer asetetaan sivun pohjaan*/
   position:fixed;
   bottom:0;
   width:100%;
