@@ -294,9 +294,3 @@ a:hover {
   padding-top: 20px; 
   padding-bottom: 20px;
 }
-
-#footer { /*Footer asetetaan sivun pohjaan*/
-  position:fixed;
-  bottom:0;
-  width:100%;
-}
