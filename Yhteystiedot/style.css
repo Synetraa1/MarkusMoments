@@ -97,7 +97,7 @@ li {
 
 /* Sivu burgeri baari */
 .sidebar {
-  height: 17%; /* Sivubaarin korkeus, 17% sopi hyvin meijän linkkeihin */
+  height: 33%; /* Sivubaarin korkeus, 17% sopi hyvin meijän linkkeihin */
   width: 0; /* Leveys, tää pitää javalla vaihdella */
   position: fixed;
   z-index: 1;
