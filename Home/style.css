@@ -97,7 +97,7 @@ li {
 
 /* Sivu burgeri baari */
 .sidebar {
-  height: 17%; /* Sivubaarin korkeus, 17% sopi hyvin meijän linkkeihin */
+  height: 33%; /* Sivubaarin korkeus, 33% sopi hyvin meijän linkkeihin */
   width: 0; /* Leveys, tää pitää javalla vaihdella */
   position: fixed;
   z-index: 1;
@@ -186,6 +186,13 @@ li {
   }
 }
 /*FOOTER*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-bottom:7px;
+}
 /* Luodaan yksinkertainen rivi */
 .row {
   display: flex;
