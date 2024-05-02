@@ -1,18 +1,39 @@
 h1 {
-  color: #000000;
-  font-size: 2em;
+  color: #ffffff;
+  font-size: 4em;
   font-family: Georgia;
   text-align: center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
 }
 
 h2 {
   color: #ffffff;
-  font-size: 3.5em; 
+  font-size: 2em; 
   font-family: Verdana;
   text-align: center;
   text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
   margin-top:30px;
 }
+h3 {
+  color: #ffffff;
+  font-size: 2em; 
+  font-family: Verdana;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  margin-top:150px;
+}
+
+#viesti p{
+  color:#ffffff;
+  font-size: 1em;
+  font-family:Verdana;
+  text-align:center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  flex:1;
+  padding-left:500px;
+  padding-right:500px;
+}
+
 .desc {
   color: #ffffff;
   font-size: 1em; 
@@ -21,10 +42,8 @@ h2 {
   text-shadow: 2px 2px 3px black; /* Tekstille varjo, helpompaa lukea  */
 }
 /*Taustaväri*/
-body {
-  background-image: url('kuvat/thumbnail_image.jpg'); /* Kuva tiedosto */
-  background-size: cover; /* Kuvan koko */
-  background-repeat: no-repeat; /* estää kuvaa toistuvasti päivittymästä  */
+#tausta {
+background-color: #000000;
 }
 
 /* Galleria */
@@ -59,7 +78,7 @@ body {
   }
 
   .gallery img{
-    width:100%
+    width:100%;
   }
 }
 div.desc {
@@ -159,4 +178,74 @@ div.desc {
   .logo img{
     width:100%
   }
+}
+/* Asiakastarinat*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana; /* Kaikkien elementtien fontiksi asetetaan verdana. */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  margin-top:-150px;
+}
+.card {
+  position:relative;
+  height: 500px;
+  margin: 20px;
+  box-shadow: 5px 5px 20px black; /* Lisää varjo lohkoon 5px oikealle ja alaspäin, sumennuksella 20px ja mustalla värillä */
+  overflow: hidden;
+
+}
+img {
+  height: 500px;
+  width: 400px; /* Venyttää ja puristaa valokuvaa */
+  border-radius: 3px;
+  transition: .5s; /* Tämän avulla valokuva kääntyy pehmeästi */
+}
+.intro {
+  height: 90px; /* Voi muuttaa teksti-ikkunan kokoa */
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0; 
+  left:0;/*
+  Sijainti elementin suhteessa vanhemman säiliön alareunaan (100 pikseliä ylhäältä) */
+  background:rgb(27, 27, 27, .5); /* Taustaväri läpinäkyvyydellä */
+  color:white;
+  transition: .5s; /* Tasainen siirtyminen 0.5 sekunnissa */
+}
+h4 {
+  margin: 10px;
+  font-size: 30px;
+  font-family: Verdana;
+}
+.container p {
+  font-size: 15px;
+  font-family: Verdana;
+  margin: 10px;
+  visibility: hidden; /* Piilottaa elementin */
+  opacity: 1;
+}
+span {
+  font-weight: bold; /* Tekstin lihavoinnin asettaminen elementeille <span> */
+}
+.card:hover {
+  cursor: pointer; /* Kursorin muuttaminen osoittimeksi */
+}
+.card:hover .intro{
+  height: 350px; /* Kun liikkuu kuvan päälle, tekstilaatikko suurenee ja venyy */
+  bottom: 150px; /* Vaihtaa paikkaa. Voi vaihtaa asentoa ylös ja alas */
+  /* background: rgb(255, 251, 251);   Voi vaihtaa tämän ikkunan taustaa */
+}
+.card:hover p {
+  opacity: 1; /* Tekstin läpinäkyvyyden asettaminen täyteen näkyvyyteen hiiren osoittimen ollessa päällä */
+  visibility: visible; /* Tekstin näkyvyyden asettaminen */
+}
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg); /* Soceltamalla skaalaus- ja kiertämis muunnoksia elementtiin */
 }
