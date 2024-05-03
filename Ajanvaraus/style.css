@@ -1,0 +1,88 @@
+/*Tänne CSS*/
+/* Sivu burgeri baari */
+.sidebar {
+    height: 33%; /* Sivubaarin korkeus, 25% sopi hyvin meijän linkkeihin */
+    width: 0; /* Leveys, tää pitää javalla vaihdella */
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background-color: #000000; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  /* Sivu burgerin linkit */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* Mouseoveri väritys*/
+  .sidebar a:hover {
+    color: #ffd000;
+  }
+  
+  /* Sivuburgeri ylä oikealle */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Sulkemis nappula */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed; 
+    top: 10px; /* Ylhäälle siirtäminen */
+    right: 10px; /* Oikealle siirtäminen */
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s; /* Viive avaukseen */
+    padding: 20px;
+  }
+  
+  /* Pienimmille näytöille huomiota */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
+  .logo {
+    position:absolute;
+    width: 250px;
+    height: 150px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .logo img{
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 600px) {
+    .logo {
+      width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    }
+  
+    .logo img{
+      width:100%
+    }
+  }
