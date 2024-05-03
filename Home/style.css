@@ -1,112 +1,109 @@
 h1 {
-  color: white;
-  font-size: 2em;
+  color: #d4af37;
+  font-size: 4em;
+  font-family: Georgia;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+}
+
+h2 {
+  color: #d4af37;
+  font-size: 2em; 
+  font-family: Verdana;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  margin-top:30px;
+}
+h3 {
+  color: #d4af37;
+  font-size: 2em; 
+  font-family: Verdana;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  margin-top:150px;
+}
+
+#viesti p{
+  color:#ffffff;
+  font-size: 1em;
+  font-family:Verdana;
+  text-align:center;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  flex:1;
+  padding-left:500px;
+  padding-right:500px;
+}
+
+.desc {
+  color: #ffffff;
+  font-size: 1em; 
   font-family: Verdana;
   text-align: center;
   text-shadow: 2px 2px 3px black; /* Tekstille varjo, helpompaa lukea  */
 }
-
-h2 {
-  color:white ;
-  font-size: 1em; 
-  font-family: Verdana;
-  text-align: center;
-  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
-}
-
-h3 {
-    color: white; 
-    font-size: 2em;
-    font-family: Verdana;
-    text-align: center;
-    text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
-
-}
-li{
-  color:white;
-
-}
-
-
-
 /*Taustaväri*/
-body {
-  
-    background-image: url('kuvat/thumbnail_image.jpg'); /* Kuva tiedosto */
-    background-size: cover; /* Kuvan koko */
-    background-repeat: no-repeat; /* estää kuvaa toistuvasti päivittymästä  */
-
-  font-family: Arial;
+#tausta {
+background-color: #000000;
 }
 
 /* Galleria */
 .gallery-container {
   margin: 0 auto; /* Keskittää gallerian vaakasuunnassa */
-  width: 80%; /* Määrittää gallerian leveyden 80% näytön leveydestä */
+  width: 50%; /* Määrittää gallerian leveyden 100% näytön leveydestä */
   display: flex; /* Käyttää joustavia bokseja */
   flex-wrap: wrap; /* Käärii boksit riveille tarvittaessa */
-  justify-content: center; /* Keskittää boksit vaakasuunnassa */
+  justify-content: space-between; /* Keskittää boksit vaakasuunnassa */
+  z-index:1;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 /* Galleria tyyli */
 .gallery {
-  width: 15%; /* Määrittää kuvan leveyden galleriassa */
+  width: calc(33.33% - 20px); /* Määrittää kuvan leveyden galleriassa */
   margin: 0 10px; /* Asettaa välimatkan kuvien välille */
   box-sizing: border-box; /* Huomioi reunukset ja täyttö */
+  z-index:1;
 }
 
 .gallery img {
   width: 100%; /* Asettaa kuvan leveyden 100% gallerian leveydestä */
   height: auto; /* Säilyttää kuvan alkuperäisen korkeuden suhteessa leveyteen */
+  z-index:1;
 }
 
 @media screen and (max-width: 600px) {
   .gallery {
-    width: 100%; /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    width: calc(95% - 5px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+  }
+
+  .gallery img{
+    width:100%;
   }
 }
 div.desc {
-  color:white;
   padding: 15px; /* Asettaa sisennyksen kuvauksiin */
   text-align: center; /* Keskittää kuvauksen tekstisisällön */
-  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
+  z-index:1;
 }
 
-/* Tyyli*/
-body {
-  position: relative; 
-  margin-bottom: 150px; 
-}
-#contact-list {
-  position: bottom; /* Sijainti alhaalla  */
-  bottom: 0;
-  text-align:center;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
-}
-ul {
-  list-style-type: none;
+*{
   padding: 0;
   margin: 0;
-}
-li {
-  margin-bottom: 10px;
 }
 
 /* Sivu burgeri baari */
 .sidebar {
-  height: 33%; /* Sivubaarin korkeus, 33% sopi hyvin meijän linkkeihin */
+  height: 33%; /* Sivubaarin korkeus, 25% sopi hyvin meijän linkkeihin */
   width: 0; /* Leveys, tää pitää javalla vaihdella */
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   right: 0;
-  background-color: #000000;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
+  background-color: #000000; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
 }
 
 /* Sivu burgerin linkit */
@@ -141,7 +138,7 @@ li {
   color: white;
   padding: 10px 15px;
   border: none;
-  position: fixed;
+  position: fixed; 
   top: 10px; /* Ylhäälle siirtäminen */
   right: 10px; /* Oikealle siirtäminen */
 }
@@ -176,132 +173,179 @@ li {
 @media screen and (max-width: 600px) {
   .logo {
     width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
-    top: 10px; 
-    left: 10px; 
-    padding: 0; 
   }
 
   .logo img{
     width:100%
   }
 }
-/*FOOTER*/
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: verdana;
-  padding-bottom:5px;
+/* Asiakastarinat*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana; /* Kaikkien elementtien fontiksi asetetaan verdana. */
 }
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  margin-top:-150px;
+}
+.card {
+  position:relative;
+  height: 500px;
+  margin: 20px;
+  box-shadow: 5px 5px 20px black; /* Lisää varjo lohkoon 5px oikealle ja alaspäin, sumennuksella 20px ja mustalla värillä */
+  overflow: hidden;
+
+}
+img {
+  height: 500px;
+  width: 400px; /* Venyttää ja puristaa valokuvaa */
+  border-radius: 3px;
+  transition: .5s; /* Tämän avulla valokuva kääntyy pehmeästi */
+}
+.intro {
+  height: 90px; /* Voi muuttaa teksti-ikkunan kokoa */
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0; 
+  left:0;/*
+  Sijainti elementin suhteessa vanhemman säiliön alareunaan (100 pikseliä ylhäältä) */
+  background:rgb(27, 27, 27, .5); /* Taustaväri läpinäkyvyydellä */
+  color:white;
+  transition: .5s; /* Tasainen siirtyminen 0.5 sekunnissa */
+}
+h4 {
+  margin: 10px;
+  font-size: 30px;
+  font-family: Verdana;
+}
+.container p {
+  font-size: 15px;
+  font-family: Verdana;
+  margin: 10px;
+  visibility: hidden; /* Piilottaa elementin */
+  opacity: 1;
+}
+span {
+  font-weight: bold; /* Tekstin lihavoinnin asettaminen elementeille <span> */
+}
+.card:hover {
+  cursor: pointer; /* Kursorin muuttaminen osoittimeksi */
+}
+.card:hover .intro{
+  height: 350px; /* Kun liikkuu kuvan päälle, tekstilaatikko suurenee ja venyy */
+  bottom: 150px; /* Vaihtaa paikkaa. Voi vaihtaa asentoa ylös ja alas */
+  /* background: rgb(255, 251, 251);   Voi vaihtaa tämän ikkunan taustaa */
+}
+.card:hover p {
+  opacity: 1; /* Tekstin läpinäkyvyyden asettaminen täyteen näkyvyyteen hiiren osoittimen ollessa päällä */
+  visibility: visible; /* Tekstin näkyvyyden asettaminen */
+}
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg); /* Soceltamalla skaalaus- ja kiertämis muunnoksia elementtiin */
+}
+
+
 /* Luodaan yksinkertainen rivi */
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px; /* Jätetään väliä sarakkeiden välille */
+display: flex;
+flex-wrap: wrap;
+margin: 0 -10px; /* Jätetään väliä sarakkeiden välille */
 }
-/* EPÄONNISTUNUT YRITYS LAITTAA PÄÄSISÄLTÖ VIEMÄÄN KAIKKI YLIMÄÄRÄINEN TILA NIIN, ETTÄ FOOTER OLISI SIVUN POHJASSA
-.row.header{
-  flex: 0 1 auto;
-}
-.row.content {
-  flex: 1 1 auto;
-}
-.row.footer {
-  flex: 0 1 40px;
-}
-*/
 
 /* Luodaan sarakkeiden tyyli */
 .col {
-  flex: 1;
-  padding: 0 10px; /* Väli sarakkeiden välille */
-  text-align: center; /* Keskitetään teksti */
-  margin-bottom: 0px; /* Rivien välinen "välin pituus" */
+flex: 1;
+padding: 0 10px; /* Väli sarakkeiden välille */
+text-align: center; /* Keskitetään teksti */
+margin-bottom: 0px; /* Rivien välinen "välin pituus" */
 }
 
-h3{
-  margin-bottom: 20px; /* Luo etäisyyttä otsikon ja sisällön välille */
+h5{
+margin-bottom: 20px; /* Luo etäisyyttä otsikon ja sisällön välille */
 }
 
 /* Media query kohdennettuna pienille näytöille */
 @media (max-width: 768px) {
-  .col {
-      flex: 0 0 100%; /* Täysi leveys pienillä näytöillä */
-  }
+.col {
+flex: 0 0 100%; /* Täysi leveys pienillä näytöillä */
+}
 }
 
 /*Ylärivi*/
 #toprow{
-  min-height: 100px;
+min-height: 100px;
 }
 #toprow svg{
-  fill: #ffffff;
-  width: 30px;
-  height: 30px;
+fill: #ffffff;
+width: 30px;
+height: 30px;
 }
 #toprow .col{
-  background-color: #191919;
-  color: #fff; /* Tekstin väri valkoiseksi paremman näkyvyyden saamiseksi */
-  padding-top: 15px; /*Täytettä rivin sarakkeiden päälle*/
+background-color: #191919;
+color: #fff; /* Tekstin väri valkoiseksi paremman näkyvyyden saamiseksi */
+padding-top: 15px; /*Täytettä rivin sarakkeiden päälle*/
 }
 
 /* Kontaktitiedot sarake*/
 #contact {
-  list-style-type: none;
-  display: flex; /* Käytä flexboxia */
-  flex-direction: column; /* Aseta sarakkeittain */
-  justify-content: center; /* Keskitä sisältö vaakasuunnassa */
-  align-items: center;
+list-style-type: none;
+display: flex; /* Käytä flexboxia */
+flex-direction: column; /* Aseta sarakkeittain */
+justify-content: center; /* Keskitä sisältö vaakasuunnassa */
+align-items: center;
 }
 #contact li{
-  display: flex; /* Käytä flexboxia */
-  align-items: center; /* Keskitä sisältö pystysuunnassa */
-  margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
+display: flex; /* Käytä flexboxia */
+align-items: center; /* Keskitä sisältö pystysuunnassa */
+margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
 }
 #contact li svg{
-  margin-right: 10px; /*Siirretään svg kuvat keskelle*/
+margin-right: 10px; /*Siirretään svg kuvat keskelle*/
 }
 
 /* address sarake*/
 
 #address {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column; /* Aseta sarakkeittain */
-  justify-content: center; /* Keskitä sisältö vaakasuunnassa */
-  align-items: center;
+list-style-type: none;
+display: flex;
+flex-direction: column; /* Aseta sarakkeittain */
+justify-content: center; /* Keskitä sisältö vaakasuunnassa */
+align-items: center;
 }
 #address li{
-  display: flex; /* Käytä flexboxia */
-  align-items: center; /* Keskitä sisältö pystysuunnassa */
-  margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
+display: flex; /* Käytä flexboxia */
+align-items: center; /* Keskitä sisältö pystysuunnassa */
+margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
 }
 #address li svg{
-  margin-right: 10px; /*Siirretään svg kuvat keskelle*/
+margin-right: 10px; /*Siirretään svg kuvat keskelle*/
 }
 
 /* Sometili sarake */
 #social svg{
-  margin-right: 20px; /* Luo väliä SVG-kuvien välille */
-  margin-top: 20px;
+margin-right: 20px; /* Luo väliä SVG-kuvien välille */
+margin-top: 20px;
 }
 #social svg a{
-  fill: #FFFFFF;
+fill: #FFFFFF;
 }
 
 #social svg a:hover{
-  fill: #d4af37;
-  transition: .5s;
+fill: #d4af37;
+transition: .5s;
 }
 
 /*Alarivi*/
 
 #copyright .col{
-  background-color: #d4af37;
-  color: #191919;
-  padding-top: 10px; 
-  padding-bottom: 10px;
+background-color: #d4af37;
+color: #191919;
+padding-top: 10px;
+padding-bottom: 10px;
 }
-
-
-
