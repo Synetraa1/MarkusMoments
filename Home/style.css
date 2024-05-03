@@ -1,6 +1,6 @@
 h1 {
   color: #d4af37;
-  font-size: 4em;
+  font-size: 3.5em;
   font-family: Georgia;
   text-align: center;
   text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
@@ -21,6 +21,13 @@ h3 {
   text-align: center;
   text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
   margin-top:150px;
+  position:relative;
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+    margin-top: 50px; /* Pienimmät näytöt */
+  }
 }
 
 #viesti p{
