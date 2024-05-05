@@ -1,4 +1,9 @@
 /*Tänne CSS*/
+
+*{
+  padding: 0;
+  margin: 0;
+}
 /* Sivu burgeri baari */
 .sidebar {
     height: 33%; /* Sivubaarin korkeus, 25% sopi hyvin meijän linkkeihin */
@@ -86,19 +91,11 @@
       width:100%
     }
   }
-.iframe-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 75%; /* Tässä määritetään Iframen suhteellinen korkeus 4:3 -suhde (jos se on sopiva) */
-}
 
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+#ajanvarausframe {
+  padding-top: 40px; /*erotellaan tää logosta täl täs näi*/
+  width: 100%;
+  height: 100%;
 }
 /*FOOTER*/
 
