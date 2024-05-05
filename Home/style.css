@@ -40,6 +40,9 @@ h3 {
   padding-left:500px;
   padding-right:500px;
 }
+#viesti p a{
+  color:#d4af37;
+}
 
 .desc {
   color: #ffffff;
