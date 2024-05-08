@@ -58,7 +58,7 @@ background-color: #000000;
 /* Galleria */
 .gallery-container {
   margin: 0 auto; /* Keskittää gallerian vaakasuunnassa */
-  width: 50%; /* Määrittää gallerian leveyden 100% näytön leveydestä */
+  width: 60%; /* Määrittää gallerian leveyden 100% näytön leveydestä */
   display: flex; /* Käyttää joustavia bokseja */
   flex-wrap: wrap; /* Käärii boksit riveille tarvittaessa */
   justify-content: space-between; /* Keskittää boksit vaakasuunnassa */
@@ -69,7 +69,7 @@ background-color: #000000;
 
 /* Galleria tyyli */
 .gallery {
-  width: calc(45% - 10px); /* Määrittää kuvan leveyden galleriassa */
+  width: calc(33.33% - 20px); /* Määrittää kuvan leveyden galleriassa */
   margin: 0 10px; /* Asettaa välimatkan kuvien välille */
   box-sizing: border-box; /* Huomioi reunukset ja täyttö */
   z-index:1;
