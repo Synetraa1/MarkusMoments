@@ -96,6 +96,10 @@ div.desc {
   z-index:1;
 }
 
+div.desc a {
+  color:#d4af37;
+}
+
 *{
   padding: 0;
   margin: 0;
