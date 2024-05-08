@@ -1,0 +1,302 @@
+h1 {
+  color: white;
+  font-size: 2em;
+  font-family: Verdana;
+  text-align: center;
+  text-shadow: 2px 2px 3px black; /* Tekstille varjo, helpompaa lukea  */
+}
+
+h2 {
+  color:white ;
+  font-size: 1em; 
+  font-family: Verdana;
+  text-align: center;
+  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
+}
+
+h3 {
+    color: white; 
+    font-size: 2em;
+    font-family: Verdana;
+    text-align: center;
+    text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
+
+}
+li{
+  color:white;
+
+}
+
+
+
+/*Taustaväri*/
+body {
+  
+    background-image: url('kuvat/thumbnail_image.jpg'); /* Kuva tiedosto */
+    background-size: cover; /* Kuvan koko */
+    background-repeat: no-repeat; /* estää kuvaa toistuvasti päivittymästä  */
+
+  font-family: Arial;
+}
+
+/* Galleria */
+.gallery-container {
+  margin: 0 auto; /* Keskittää gallerian vaakasuunnassa */
+  width: 80%; /* Määrittää gallerian leveyden 80% näytön leveydestä */
+  display: flex; /* Käyttää joustavia bokseja */
+  flex-wrap: wrap; /* Käärii boksit riveille tarvittaessa */
+  justify-content: center; /* Keskittää boksit vaakasuunnassa */
+}
+
+/* Galleria tyyli */
+.gallery {
+  width: 15%; /* Määrittää kuvan leveyden galleriassa */
+  margin: 0 10px; /* Asettaa välimatkan kuvien välille */
+  box-sizing: border-box; /* Huomioi reunukset ja täyttö */
+}
+
+.gallery img {
+  width: 100%; /* Asettaa kuvan leveyden 100% gallerian leveydestä */
+  height: auto; /* Säilyttää kuvan alkuperäisen korkeuden suhteessa leveyteen */
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    width: 100%; /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+  }
+}
+div.desc {
+  color:white;
+  padding: 15px; /* Asettaa sisennyksen kuvauksiin */
+  text-align: center; /* Keskittää kuvauksen tekstisisällön */
+  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
+}
+
+/* Tyyli*/
+body {
+  position: relative; 
+  margin-bottom: 150px; 
+}
+#contact-list {
+  position: bottom; /* Sijainti alhaalla  */
+  bottom: 0;
+  text-align:center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 2px black; /* Tekstille varjo, helpompaa lukea  */
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 10px;
+}
+
+/* Sivu burgeri baari */
+.sidebar {
+  height: 17%; /* Sivubaarin korkeus, 17% sopi hyvin meijän linkkeihin */
+  width: 0; /* Leveys, tää pitää javalla vaihdella */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* Sivu burgerin linkit */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Mouseoveri väritys*/
+.sidebar a:hover {
+  color: #ffd000;
+}
+
+/* Sivuburgeri ylä oikealle */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Sulkemis nappula */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 10px; /* Ylhäälle siirtäminen */
+  right: 10px; /* Oikealle siirtäminen */
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s; /* Viive avaukseen */
+  padding: 20px;
+}
+
+/* Pienimmille näytöille huomiota */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.logo {
+  position:absolute;
+  width: 250px;
+  height: 150px;
+  top: 5px;
+  left: 5px;
+}
+
+.logo img{
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+    top: 10px; 
+    left: 10px; 
+    padding: 0; 
+  }
+
+  .logo img{
+    width:100%
+  }
+}
+/*FOOTER*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+/* Luodaan yksinkertainen rivi */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px; /* Jätetään väliä sarakkeiden välille */
+}
+
+/* Luodaan sarakkeiden tyyli */
+.col {
+  flex: 1;
+  padding: 0 10px; /* Väli sarakkeiden välille */
+  text-align: center; /* Keskitetään teksti */
+  margin-bottom: 0px; /* Rivien välinen "välin pituus" */
+}
+
+h3{
+  margin-bottom: 20px; /* Luo etäisyyttä otsikon ja sisällön välille */
+}
+
+/* Media query kohdennettuna pienille näytöille */
+@media (max-width: 768px) {
+  .col {
+      flex: 0 0 100%; /* Täysi leveys pienillä näytöillä */
+  }
+}
+
+/*Ylärivi*/
+#toprow{
+  min-height: 200px;
+}
+#toprow svg{
+  fill: #ffffff;
+  width: 30px;
+  height: 30px;
+}
+#toprow .col{
+  background-color: #191919;
+  color: #fff; /* Tekstin väri valkoiseksi paremman näkyvyyden saamiseksi */
+  padding-top: 15px; /*Täytettä rivin sarakkeiden päälle*/
+}
+
+/* Kontaktitiedot sarake*/
+#contact {
+  list-style-type: none;
+  display: flex; /* Käytä flexboxia */
+  flex-direction: column; /* Aseta sarakkeittain */
+  justify-content: center; /* Keskitä sisältö vaakasuunnassa */
+  align-items: center;
+}
+#contact li{
+  display: flex; /* Käytä flexboxia */
+  align-items: center; /* Keskitä sisältö pystysuunnassa */
+  margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
+}
+#contact li svg{
+  margin-right: 10px; /*Siirretään svg kuvat keskelle*/
+}
+
+/* Linkit sarake*/
+#links ul{ /*Tässä päätetään listan tyyli ja tyyppi, eli onko listassa palloja tai numeroita. Tässä ei ole kumpaakaan näistä eli "none".*/
+  list-style-type: none;
+  color: #ffff;
+}
+a:link {
+  color: #ffff; /*Linkin väri*/
+  background-color: transparent;
+  text-decoration: none; /*Tekstin koristelu esim. cursive tai alaviivattu teksti, tässä ei ole mitään koristelua*/
+}
+a:visited {
+  color: #ffff; /*Väri mikä jää linkin väriksi kun linkkiä on klikattu*/
+  background-color: transparent;
+  text-decoration: none;
+}
+/* Lisätään kullan värinen hover efekti linkkeihin */
+a:hover { 
+  color: #d4af37;
+  background-color: transparent;
+  text-decoration: none;
+  transition: .5s; /*Hover efektin aika*/
+}
+/* Sometili sarake */
+#social svg{
+  margin-right: 20px; /* Luo väliä SVG-kuvien välille */
+}
+#social svg a{
+  fill: #FFFFFF; /*Tämä täyttää sosiaalisen median svg kuvat valkoisella*/
+}
+
+#social svg a:hover{ /*Median svg kuvien hover efekti. Värinä kulta ja aika 0.5 sekuntia*/
+  fill: #d4af37;
+  transition: .5s;
+}
+
+/*Alarivi*/
+
+#copyright .col{ /*Alarivin väri ja koko asetukset*/
+  background-color: #d4af37;
+  color: #191919;
+  padding-top: 20px; 
+  padding-bottom: 20px;
+}
+
+#footer { /*Footer asetetaan sivun pohjaan*/
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
