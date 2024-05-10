@@ -30,18 +30,13 @@
   padding: 20px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
   text-decoration: none; /* Poista alleviivaus */
   font-size: 20px; /* Aseta fontin koko */
+  font-family:Verdana;
 }
 
 /* Vaihda linkkien väriä hover-tilassa */
 .topnav a:hover {
   background-color: #d4af37; /* Aseta taustaväri */
   color: black; /* Aseta tekstin väri */
-}
-
-/* Lisää aktiivinen luokka korostamaan nykyistä sivua */
-.topnav a.active {
-  background-color: #000000; /* Aseta taustaväri */
-  color: #d4af37; /* Aseta tekstin väri */
 }
 
 /* Piilota linkki, joka avaa ja sulkee navigaatiopalkin pienillä näytöillä */

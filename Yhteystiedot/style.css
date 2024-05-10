@@ -144,12 +144,6 @@ div.desc a {
   color: black; /* Aseta tekstin väri */
 }
 
-/* Lisää aktiivinen luokka korostamaan nykyistä sivua */
-.topnav a.active {
-  background-color: #000000; /* Aseta taustaväri */
-  color: #d4af37; /* Aseta tekstin väri */
-}
-
 /* Piilota linkki, joka avaa ja sulkee navigaatiopalkin pienillä näytöillä */
 .topnav .icon {
   display: none; /* Piilota oletuksena */
