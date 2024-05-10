@@ -22,6 +22,10 @@ h3 {
   text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
   margin-top:150px;
 }
+/*Taustaväri*/
+.tausta {
+  background-color: #000000;
+  }
 
 @media only screen and (max-width: 768px) {
   h3 {
@@ -101,91 +105,74 @@ div.desc {
   margin: 0;
 }
 
-/* Sivu burgeri baari */
-.sidebar {
-  height: 33%; /* Sivubaarin korkeus, 25% sopi hyvin meijän linkkeihin */
-  width: 0; /* Leveys, tää pitää javalla vaihdella */
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  right: 0;
-  background-color: #000000; 
-  overflow-x: hidden; 
-  padding-top: 60px; 
-  transition: 0.5s; 
-}
-
-/* Sivu burgerin linkit */
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-}
-
-/* Mouseoveri väritys*/
-.sidebar a:hover {
-  color: #ffd000;
-}
-
-/* Sivuburgeri ylä oikealle */
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Sulkemis nappula */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #000000;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  position: fixed; 
-  top: 10px; /* Ylhäälle siirtäminen */
-  right: 10px; /* Oikealle siirtäminen */
-}
-
-.openbtn:hover {
-  background-color: #444;
-}
-
-#main {
-  transition: margin-left .5s; /* Viive avaukseen */
-  padding: 20px;
-}
-
-/* Pienimmille näytöille huomiota */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
+/*logon asetuksia ja navbaarin aloitus*/
 .logo {
-  position:absolute;
-  width: 250px;
-  height: 150px;
-  top: 5px;
-  left: 5px;
+  float: left; /* Asettaa logon vasemmalle puolelle */
+  padding: 10px; /* Lisää tyhjää tilaa ympärille */
 }
 
-.logo img{
-  width: 100%;
-  height: auto;
+.logo img {
+  height: 40px; /* Määritä logon korkeus */
+  width: 100%; /* Tee logo responsiiviseksi, leveys täyttää käytettävissä olevan tilan */
 }
-@media screen and (max-width: 600px) {
-  .logo {
-    width: calc(50% - 20px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
+
+/* Lisää musta taustaväri navigaatiopalkille */
+.topnav {
+  background-color: #191919; /* Aseta taustaväri */
+  overflow: hidden; /* Estä lapsielementtien näyttäminen yli navigaatiopalkin rajojen */
+}
+
+/* Tyylittele linkit navigaatiopalkissa */
+.topnav a {
+  float: left; /* Asettaa linkit vaakasuoraan */
+  display: block; /* Muuta linkit blokeiksi, jolloin ne vievät koko leveyden */
+  color: #d4af37; /* Aseta linkkien väri */
+  text-align: center; /* Keskitä tekstit */
+  padding: 20px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
+  text-decoration: none; /* Poista alleviivaus */
+  font-size: 20px; /* Aseta fontin koko */
+  font-family: verdana;
+}
+
+/* Vaihda linkkien väriä hover-tilassa */
+.topnav a:hover {
+  background-color: #d4af37; /* Aseta taustaväri */
+  color: black; /* Aseta tekstin väri */
+}
+
+/* Piilota linkki, joka avaa ja sulkee navigaatiopalkin pienillä näytöillä */
+.topnav .icon {
+  display: none; /* Piilota oletuksena */
+}
+
+/* Media query responsiivisuudelle pienillä näytöillä */
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child) {
+    display: none; /* Piilota linkit paitsi ensimmäinen */
   }
+  
+  .topnav a.icon {
+    float: right; /* Aseta kuvake oikealle */
+    display: block; /* Näytä kuvake blokkina */
+  }
+}
 
-  .logo img{
-    width:100%
+/* Lisää responsiivisuus käyttämällä JavaScriptiä kuvakkeen painamisen yhteydessä */
+@media screen and (max-width: 700px) {
+  .topnav.responsive {
+    position: relative; /* Aseta sijainti suhteelliseksi */
+  }
+  
+  .topnav.responsive a.icon {
+    position: absolute; /* Aseta sijainti absoluuttiseksi */
+    right: 0; /* Aseta oikea reuna */
+    top: 0; /* Aseta yläreuna */
+  }
+  
+  .topnav.responsive a {
+    float: none; /* Älä aseta vaakasuuntaista liittoa */
+    display: block; /* Näytä blokkina */
+    text-align: left; /* Aseta teksti vasemmalle */
   }
 }
 /* Asiakastarinat*/

@@ -1,10 +1,9 @@
-/* Sivu burgerin leveys */
-function openNav() {
-  document.getElementById("mySidebar").style.width = "225px";
-  document.getElementById("main").style.marginLeft = "225px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
+/* Sivu burgerin asetuksia */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive"; // Lisää "responsive" luokka, jos navigaatiopalkilla ei vielä ole sitä
+  } else {
+    x.className = "topnav"; // Muuten palauta alkuperäinen "topnav" luokka
+  }
 }
