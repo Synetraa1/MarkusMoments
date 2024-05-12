@@ -79,7 +79,7 @@ background-color: #000000;
   z-index:1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .gallery {
     width: calc(95% - 5px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
   }
@@ -150,7 +150,7 @@ div.desc a {
 }
 
 /* Media query responsiivisuudelle pienillä näytöillä */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
   .topnav a:not(:first-child) {
     display: none; /* Piilota linkit paitsi ensimmäinen */
   }

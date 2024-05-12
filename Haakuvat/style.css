@@ -145,7 +145,7 @@ div.desc {
 }
 
 /* Media query responsiivisuudelle pienillä näytöillä */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
   .topnav a:not(:first-child) {
     display: none; /* Piilota linkit paitsi ensimmäinen */
   }
