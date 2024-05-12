@@ -171,10 +171,26 @@
 
 
 #blog{
-  margin-right: 30px;
-  margin-left: 30px;
-  margin-top: 30px;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-  background-color: gray: 
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 60px;
+  font-family:Verdana;
+  background-color: grey;
+  text-align: left;
 
 }
+h1{
+  font-size: 25px; /* Luo etäisyyttä otsikon ja sisällön välille */
+  color:white;
+  margin-left: 40px;
+  text-shadow: 1px 1px 2px black;/* Tekstille varjo, helpompaa lukea  */
+  }
+  h2{
+    font-size: 25px; /* Luo etäisyyttä otsikon ja sisällön välille */
+    
+    }
+  
+
+  .tausta{
+    background-color: black;
+  }
