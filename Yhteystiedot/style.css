@@ -133,9 +133,9 @@ div.desc a {
   display: block; /* Muuta linkit blokeiksi, jolloin ne vievät koko leveyden */
   color: #d4af37; /* Aseta linkkien väri */
   text-align: center; /* Keskitä tekstit */
-  padding: 20px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
+  padding: 28px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
   text-decoration: none; /* Poista alleviivaus */
-  font-size: 20px; /* Aseta fontin koko */
+  font-size: 20px
 }
 
 /* Vaihda linkkien väriä hover-tilassa */
