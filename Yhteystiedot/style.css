@@ -41,7 +41,7 @@ div.desc a {
 }
 
 .logo img {
-  max-height: 10vh; /* Määritä logon korkeus */
+  height: 50px; /* Määritä logon korkeus */
   width: 100%; /* Tee logo responsiiviseksi, leveys täyttää käytettävissä olevan tilan */
 }
 

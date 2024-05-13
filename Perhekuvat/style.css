@@ -112,7 +112,7 @@ div.desc {
 }
 
 .logo img {
-  height: 40px; /* Määritä logon korkeus */
+  height: 50px; /* Määritä logon korkeus */
   width: 100%; /* Tee logo responsiiviseksi, leveys täyttää käytettävissä olevan tilan */
 }
 
