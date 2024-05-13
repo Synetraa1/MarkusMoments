@@ -256,7 +256,7 @@ span {
 .row {
 display: flex;
 flex-wrap: wrap;
-margin: 0 -10px; /* Jätetään väliä sarakkeiden välille */
+ /* Jätetään väliä sarakkeiden välille */
 }
 
 /* Luodaan sarakkeiden tyyli */
