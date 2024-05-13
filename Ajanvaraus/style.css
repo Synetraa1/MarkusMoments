@@ -29,7 +29,8 @@
   text-align: center; /* Keskitä tekstit */
   padding: 28px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
   text-decoration: none; /* Poista alleviivaus */
-  font-size: 20px
+  font-size: 20px;
+  font-family: verdana;
 }
 
 /* Vaihda linkkien väriä hover-tilassa */
@@ -104,11 +105,56 @@ h3{
   .col {
       flex: 0 0 100%; /* Täysi leveys pienillä näytöillä */
   }
+  
+}
+@media only screen and (min-width: 1026px) {/*Säädetään varaa aika nappi mobiilikäyttäjille*/
+  #ajanvaraus_iso{
+    display: block;
+  }
+  #ajanvaraus_pieni{
+    display:none;
+  }
+}
+@media only screen and (max-width: 1026px) {
+  #ajanvaraus_iso{
+    display: none;
+  }
+  #ajanvaraus_pieni{
+    display: block;
+  }
+}
+
+/*Ajanvaraus Iframe*/
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  /*height: 100%;*/
+  /*padding-bottom: 40%; /* Tässä määritetään Iframen suhteellinen korkeus 4:3 -suhde (jos se on sopiva) */
+  padding-bottom: 100vh; /* Tässä määritetään Iframen suhteellinen korkeus 4:3 -suhde (jos se on sopiva) */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#ajanvaraus_pieni{
+  background-color: #191919;
+}
+#ajanvaraus_pieni button{
+  height: 20vh;
+  width: 80vw;
+  margin: 5vh;
 }
 
 /*Ylärivi*/
 #toprow{
   min-height: 100px;
+  position: relative;
 }
 #toprow svg{
   fill: #ffffff;
