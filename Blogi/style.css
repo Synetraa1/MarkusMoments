@@ -131,10 +131,7 @@
   
   #address {
   list-style-type: none;
-  display: flex;
-  flex-direction: column; /* Aseta sarakkeittain */
-  justify-content: center; /* Keskitä sisältö vaakasuunnassa */
-  align-items: center;
+
   }
   #address li{
   display: flex; /* Käytä flexboxia */
@@ -166,6 +163,7 @@
   color: #191919;
   padding-top: 10px;
   padding-bottom: 10px;
+
   }
 
 
