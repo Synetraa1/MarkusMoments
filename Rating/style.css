@@ -26,11 +26,12 @@ body {
 .wrapper {
     background: var(--black); /* Aseta taustaväri */
     padding: 2rem; /* Lisää täyttöä sisäpuolelle */
-    max-width: 576px; /* Aseta maksimileveys */
+    max-width: 700px; /* Aseta maksimileveys */
     width: 100%; /* Aseta täysi leveys */
     border-radius: .75rem; /* Aseta reunan pyöristys */
     box-shadow: var(--shadow); /* Aseta varjo */
     text-align: center; /* Keskitä teksti */
+    margin-top: 100px; /* Siirretään tekstiä alaspäin */
 }
 /* Aseta otsikkojen tyyli */
 .wrapper h3 {
@@ -126,8 +127,9 @@ img{
     top: 0; /* Asettaa yläreunan sijainnin */
     display: block; /* Muuttaa kuvan blokkielementiksi */
     margin: 0 auto; /* Automaattinen keskitys vaakasuunnassa */
-    width: 42%; /* Asettaa kuvan leveyden suhteessa kontaineriin */
-    height:9.3rem; /* Asettaa kuvan korkeuden */
+    width: 48%; /* Asettaa kuvan leveyden suhteessa kontaineriin */
+    height:10rem; /* Asettaa kuvan korkeuden */
     border-radius: 10px; /* Pyöristää kuvan kulmat */
+    margin-top: 30px; /* Siirretään kuva alaspäin */
 
 }
