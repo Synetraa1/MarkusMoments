@@ -1,248 +1,17 @@
-@media only screen and (max-width: 768px) {
-  h3 {
-    margin-top: 50px; /* Pienimmät näytöt */
-  }
-}
-@media screen and (max-width: 600px) {
-  .gallery {
-    width: calc(95% - 5px); /* Muuttaa kuvien leveyden 100% näytön leveydestä pienemmillä näytöillä */
-  }
 
-  .gallery img{
-    width:100%;
-  }
-  .viesti{
-    padding:10px;
-  }
-  .viesti p{
-    font-size:14px;
-  }
+/* Alustaa kaikki elementit */
+* {
+  font-family: Georgia;
 }
 
-/*Taustaväri*/
-.tausta {
-  background-color: #000000;
-  }
-
-div.desc {
-  padding: 15px; /* Asettaa sisennyksen kuvauksiin */
-  text-align: center; /* Keskittää kuvauksen tekstisisällön */
-  z-index:1;
-}
-
-div.desc a {
-  color:#d4af37;
-}
-
-*{
-  padding: 0;
-  margin: 0;
-}
-
-/*logon asetuksia ja navbaarin aloitus*/
-.logo {
-  float: left; /* Asettaa logon vasemmalle puolelle */
-  padding: 10px; /* Lisää tyhjää tilaa ympärille */
-}
-
-.logo img {
-  height: 50px; /* Määritä logon korkeus */
-  width: 100%; /* Tee logo responsiiviseksi, leveys täyttää käytettävissä olevan tilan */
-}
-
-/* Lisää musta taustaväri navigaatiopalkille */
-.topnav {
-  background-color: #191919; /* Aseta taustaväri */
-  overflow: hidden; /* Estä lapsielementtien näyttäminen yli navigaatiopalkin rajojen */
-}
-
-/* Tyylittele linkit navigaatiopalkissa */
-.topnav a {
-  float: left; /* Asettaa linkit vaakasuoraan */
-  display: block; /* Muuta linkit blokeiksi, jolloin ne vievät koko leveyden */
-  color: #d4af37; /* Aseta linkkien väri */
-  text-align: center; /* Keskitä tekstit */
-  padding: 24px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
-  text-decoration: none; /* Poista alleviivaus */
-  font-size: 20px; /* Aseta fontin koko */
-}
-
-/* Vaihda linkkien väriä hover-tilassa */
-.topnav a:hover {
-  background-color: #d4af37; /* Aseta taustaväri */
-  color: black; /* Aseta tekstin väri */
-}
-
-/* Piilota linkki, joka avaa ja sulkee navigaatiopalkin pienillä näytöillä */
-.topnav .icon {
-  display: none; /* Piilota oletuksena */
-}
-/* Media query responsiivisuudelle pienillä näytöillä */
-@media screen and (max-width: 760px) {
-  .topnav a:not(:first-child) {
-    display: none; /* Piilota linkit paitsi ensimmäinen */
-  }
-  
-  .topnav a.icon {
-    float: right; /* Aseta kuvake oikealle */
-    display: block; /* Näytä kuvake blokkina */
-  }
-}
-
-/* Lisää responsiivisuus käyttämällä JavaScriptiä kuvakkeen painamisen yhteydessä */
-@media screen and (max-width: 700px) {
-  .topnav.responsive {
-    position: relative; /* Aseta sijainti suhteelliseksi */
-  }
-  
-  .topnav.responsive a.icon {
-    position: absolute; /* Aseta sijainti absoluuttiseksi */
-    right: 0; /* Aseta oikea reuna */
-    top: 0; /* Aseta yläreuna */
-  }
-  
-  .topnav.responsive a {
-    float: none; /* Älä aseta vaakasuuntaista liittoa */
-    display: block; /* Näytä blokkina */
-    text-align: left; /* Aseta teksti vasemmalle */
-  }
-}
-/*Yhteydenottolomake*/
-/* Resetoidaan marginaalit ja pehmennetään fontti */
-body {
-  font-family: verdana;
-  color: #ffff;
-  margin: 0;
-  padding: 0;
-  /*padding-top: 200px;*/ /*MIKSI TÄMÄ OLI TÄSSÄ HÄH MITÄ HÄH*/
-  background-color: #191919;
-  text-align: start;
-}
-/* Määritellään lomakkeen sisältävä laatikko */
-.container {
-  display: flex; /* Joustava layout */
-  max-width: 1000px; /* Määritellään maksimileveys */
-  margin: 20px auto; /* Automaattinen marginaali ylä- ja alapuolelle, ja 20 pikselin marginaali sivuille */
-  padding: 20px; /* Sisäinen täyttö */
-  border: 1px solid #d4af37; /* Kultainen reunus */
-  border-radius: 5px; /* Pyöristetään kulmat */
-  background-color: #323232;
-}
-/* Määritellään lomakkeen alue */
-.form-container {
-  flex: 1; /* Venyttää sisältöä */
-  padding-right: 20px; /* Lisää tilaa oikealle */
-}
-/* Määritellään syöttökentät ja tekstilaatikko */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%; /* Täyttää koko leveyden */
-  padding: 10px; /* Sisäinen täyttö */
-  margin-bottom: 10px; /* 10 pikselin marginaali alapuolelle */
-  border: 1px solid #d4af37; /* Kulta reunus */
-  border-radius: 5px; /* Pyöristetään kulmat */
-  box-sizing: border-box; /* Sisällytetään reunukset laskettuun leveyteen */
-}
-#iitunteksti {
-  padding: 10px 0px 20px 0px;
-}
-/* Määritellään lähetyspainike */
-input[type="submit"] {
-  background-color: #d4af37; /* Kulta tausta */
-  color: #fff; /* Valkoinen teksti */
-  padding: 10px 20px; /* Sisäinen täyttö */
-  border: none; /* Ei reunusta */
-  border-radius: 5px; /* Pyöristetään kulmat */
-  cursor: pointer; /* Hiiren osoitin muutetaan käsi-kuvaksi */
-}
-/* Efekti lähetyspainikkeen päälle vievän hiiren kanssa */
-input[type="submit"]:hover {
-  background-color: #dcbf5e; /* Vaaleampi kulta tausta */
-}
-/* Määritellään kuvan alue */
-.map-container {
-  flex: 1; /* Venyttää sisältöä */
-}
-/* Kontaktitiedot sarake*/
-/*Ylärivi*/
-#toprow {
-min-height: 100px;
-}
-#toprow svg{
-fill: #ffffff;
-width: 30px;
-height: 30px;
-}
-#toprow .col{
-background-color: #191919;
-color: #fff; /* Tekstin väri valkoiseksi paremman näkyvyyden saamiseksi */
-padding-top: 15px; /*Täytettä rivin sarakkeiden päälle*/
-}
-
-/* Kontaktitiedot sarake*/
-#contact {
-list-style-type: none;
-
-}
-#contact li{
-display: flex; /* Käytä flexboxia */
-align-items: center; /* Keskitä sisältö pystysuunnassa */
-margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
-}
-#contact li svg{
-margin-right: 10px; /*Siirretään svg kuvat keskelle*/
-}
-
-/* address sarake*/
-
-#address {
-list-style-type: none;
-display: flex;
-flex-direction: column; /* Aseta sarakkeittain */
-justify-content: start; /* Keskitä sisältö vaakasuunnassa */
-align-items: center;
-}
-#address li{
-display: flex; /* Käytä flexboxia */
-align-items: center; /* Keskitä sisältö pystysuunnassa */
-margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
-}
-#address li svg{
-margin-right: 10px; /*Siirretään svg kuvat keskelle*/
-}
-
-/* Sometili sarake */
-
-#social svg{
-margin-right: 20px; /* Luo väliä SVG-kuvien välille */
-/*margin-top: 20px;*/
-}
-#social svg a{
-fill: #FFFFFF;
-}
-
-#social svg a:hover{
-fill: #d4af37;
-transition: .5s;
-}
-
-/*Alarivi*/
-
-#copyright .col{
-background-color: #d4af37;
-color: #191919;
-padding-top: 10px; 
-padding-bottom: 10px;
-}
-
-
+/* Luodaan yksinkertainen rivi */
 .row {
-display: flex;
-flex-wrap: wrap;
-margin: 0 -10px; /* Jätetään väliä sarakkeiden välille */
+  display: flex;
+  flex-wrap: wrap;
+  /* Jätetään väliä sarakkeiden välille */
 }
+
+/* Luodaan sarakkeiden tyyli */
 .col {
 flex: 1;
 padding: 0 10px; /* Väli sarakkeiden välille */
@@ -250,3 +19,172 @@ text-align: center; /* Keskitetään teksti */
 margin-bottom: 0px; /* Rivien välinen "välin pituus" */
 }
 
+/* Määrittää fonttikoon suhteelliseksi */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden; /* Piilottaa vaakasuoran vierityspalkin */
+}
+
+/* Määrittää kuvan maksimikoon */
+img {
+  max-width: 100%;
+}
+
+/* Asettaa taustan värin ja sivun keskelle */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #0d1117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Määrittää yhteystietojen osan tyylin */
+.contacts {
+  padding: 2rem 9%;
+  position: left;
+}
+
+.contacts .heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  color: #f2f2f2;
+  font-size: calc(10px + (50 - 25) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.contacts .heading span {
+  color: #d4af37;
+}
+
+.contacts h4 {
+  color:#d4af37;
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 100)));
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contacts .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contacts .row .img {
+  flex: 0.5 0.5 3rem;
+}
+
+.contacts .row form {
+  flex:1 1 40rem;
+}
+
+.contacts .row form .box {
+  width: 100%;
+  margin: 1rem 0rem 2rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+}
+
+.contacts .row form span {
+  color:#d4af37;
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 100)));
+}
+
+.contact-input {
+  display: flex;
+  height: 140px;
+  width: 500px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+/* Tyyli painikkeelle */
+.btn {
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0,0, .7);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover-tila painikkeelle */
+.btn:hover {
+  background-color: #d4af37;
+  color: #f2f2f2;
+}
+
+/*Ylärivi*/
+#toprow {
+  min-height: 100px;
+}
+#toprow svg{
+  fill: #ffffff;
+  width: 30px;
+  height: 30px;
+}
+#toprow .col{
+  background-color: #191919;
+  color: #fff; /* Tekstin väri valkoiseksi paremman näkyvyyden saamiseksi */
+  padding-top: 15px; /*Täytettä rivin sarakkeiden päälle*/
+}
+
+/* Kontaktitiedot sarake*/
+#contacts {
+  list-style-type: none;
+}
+
+
+#contacts li{
+  display: flex; /* Käytä flexboxia */
+  align-items: center; /* Keskitä sisältö pystysuunnassa */
+  margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
+}
+#contacts li svg{
+  margin-right: 10px; /*Siirretään svg kuvat keskelle*/
+}
+
+/* address sarake*/
+
+#address {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column; /* Aseta sarakkeittain */
+  justify-content: start; /* Keskitä sisältö vaakasuunnassa */
+  align-items: center;
+}
+#address li{
+  display: flex; /* Käytä flexboxia */
+  align-items: center; /* Keskitä sisältö pystysuunnassa */
+  margin-bottom: 10px; /* Lisää väliä listaelementtien välille */
+}
+#address li svg{
+  margin-right: 10px; /*Siirretään svg kuvat keskelle*/
+}
+
+/* Sometili sarake */
+
+#social svg{
+  margin-right: 20px; /* Luo väliä SVG-kuvien välille */
+  margin-top: 20px;
+}
+#social svg a{
+  fill: #FFFFFF;
+}
+
+#social svg a:hover{
+  fill: #d4af37;
+  transition: .5s;
+}
+
+/*Alarivi*/
+
+#copyright .col{
+  background-color: #d4af37;
+  color: #191919;
+  padding-top: 10px; 
+  padding-bottom: 10px;
+}
