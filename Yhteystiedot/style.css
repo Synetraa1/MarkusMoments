@@ -19,6 +19,11 @@
   }
 }
 
+/*Taustaväri*/
+.tausta {
+  background-color: #000000;
+  }
+
 div.desc {
   padding: 15px; /* Asettaa sisennyksen kuvauksiin */
   text-align: center; /* Keskittää kuvauksen tekstisisällön */
@@ -57,9 +62,9 @@ div.desc a {
   display: block; /* Muuta linkit blokeiksi, jolloin ne vievät koko leveyden */
   color: #d4af37; /* Aseta linkkien väri */
   text-align: center; /* Keskitä tekstit */
-  padding: 28px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
+  padding: 24px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
   text-decoration: none; /* Poista alleviivaus */
-  font-size: 20px;
+  font-size: 20px; /* Aseta fontin koko */
 }
 
 /* Vaihda linkkien väriä hover-tilassa */
@@ -72,7 +77,6 @@ div.desc a {
 .topnav .icon {
   display: none; /* Piilota oletuksena */
 }
-
 /* Media query responsiivisuudelle pienillä näytöillä */
 @media screen and (max-width: 760px) {
   .topnav a:not(:first-child) {
@@ -112,6 +116,7 @@ body {
   padding: 0;
   /*padding-top: 200px;*/ /*MIKSI TÄMÄ OLI TÄSSÄ HÄH MITÄ HÄH*/
   background-color: #191919;
+  text-align: start;
 }
 /* Määritellään lomakkeen sisältävä laatikko */
 .container {
@@ -119,9 +124,9 @@ body {
   max-width: 1000px; /* Määritellään maksimileveys */
   margin: 20px auto; /* Automaattinen marginaali ylä- ja alapuolelle, ja 20 pikselin marginaali sivuille */
   padding: 20px; /* Sisäinen täyttö */
-  border: 1px solid #ccc; /* Harmaa reunus */
+  border: 1px solid #d4af37; /* Kultainen reunus */
   border-radius: 5px; /* Pyöristetään kulmat */
-  background-color: #666666;
+  background-color: #323232;
 }
 /* Määritellään lomakkeen alue */
 .form-container {
@@ -136,14 +141,17 @@ textarea {
   width: 100%; /* Täyttää koko leveyden */
   padding: 10px; /* Sisäinen täyttö */
   margin-bottom: 10px; /* 10 pikselin marginaali alapuolelle */
-  border: 1px solid #ccc; /* Harmaa reunus */
+  border: 1px solid #d4af37; /* Kulta reunus */
   border-radius: 5px; /* Pyöristetään kulmat */
   box-sizing: border-box; /* Sisällytetään reunukset laskettuun leveyteen */
 }
+#iitunteksti {
+  padding: 10px 0px 20px 0px;
+}
 /* Määritellään lähetyspainike */
 input[type="submit"] {
-  background-color: #4CAF50; /* Vihreä tausta */
-  color: white; /* Valkoinen teksti */
+  background-color: #d4af37; /* Kulta tausta */
+  color: #fff; /* Valkoinen teksti */
   padding: 10px 20px; /* Sisäinen täyttö */
   border: none; /* Ei reunusta */
   border-radius: 5px; /* Pyöristetään kulmat */
@@ -151,16 +159,11 @@ input[type="submit"] {
 }
 /* Efekti lähetyspainikkeen päälle vievän hiiren kanssa */
 input[type="submit"]:hover {
-  background-color: #45a049; /* Tummempi vihreä tausta */
+  background-color: #dcbf5e; /* Vaaleampi kulta tausta */
 }
 /* Määritellään kuvan alue */
 .map-container {
   flex: 1; /* Venyttää sisältöä */
-}
-/* Määritellään kartan kuva */
-.map-image {
-  width: 100%; /* Täyttää koko leveyden */
-  border-radius: 5px; /* Pyöristetään kulmat */
 }
 /* Kontaktitiedot sarake*/
 /*Ylärivi*/
