@@ -203,6 +203,7 @@ flex: 0 0 100%; /* Täysi leveys pienillä näytöillä */
 /*Ylärivi*/
 #toprow{
 min-height: 100px;
+font-family: verdana;
 }
 #toprow svg{
 fill: #ffffff;
