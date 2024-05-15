@@ -1,109 +1,133 @@
+/* Nollaa marginaalit, täytöt ja laatikon koko */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+    box-sizing: border-box; /* Rajaa laatikon koko */
+    font-family:'Poppins', sans-serif; /* Aseta fontti */
 }
+/* Määritä väreille */
 :root {
-    --yellow: #FFBD13;
-    --bllue: #666769;
-    --grey1: #666666;
-    --light: #F5F5F5;
-    --grey: #AAA;
-    --white: #FFF;
-    --black: #000000;
-    --shadow: 8px 8px 30px rgba(0,0,0,.05);
+    --gold: #d4af37; /* Kulta-värin määrittely */
+    --light: #F5F5F5; /* Vaalean värin määrittely */
+    --grey: #AAA; /* Harmaan värin määrittely */
+    --white: #d4af37; /* Valkoisen värin määrittely */
+    --black: #000000; /* Mustan värin määrittely */
+    --shadow: 8px 8px 30px rgba(0,0,0,.05); /* Varjon määrittely */
 }
+/* Aseta taustaväri, keskitä sivu ja sisältö */
 body {
-    background:  var(--light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background:  var(--black); /* Aseta taustaväri */
+    display: flex; /* Aseta näyttötyyli */
+    justify-content: center; /* Keskitä vaakasuunnassa */
+    align-items: center; /* Keskitä pystysuunnassa */
+    min-height: 100vh; /* Aseta minimikorkeus */
 }
+/* Aseta pääsisältöalueen tyyli */
 .wrapper {
-    background: var(--white);
-    padding: 2rem;
-    max-width: 576px;
-    width: 100%;
-    border-radius: .75rem;
-    box-shadow: var(--shadow);
-    text-align: center;
+    background: var(--black); /* Aseta taustaväri */
+    padding: 2rem; /* Lisää täyttöä sisäpuolelle */
+    max-width: 576px; /* Aseta maksimileveys */
+    width: 100%; /* Aseta täysi leveys */
+    border-radius: .75rem; /* Aseta reunan pyöristys */
+    box-shadow: var(--shadow); /* Aseta varjo */
+    text-align: center; /* Keskitä teksti */
 }
+/* Aseta otsikkojen tyyli */
 .wrapper h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom:  1rem;
+    font-size: 1.5rem; /* Aseta fonttikoko */
+    font-weight: 600; /* Aseta fontin vahvuus */
+    margin-bottom:  1rem; /* Aseta alareunaväli */
+    color: #d4af37; /* Aseta tekstiväri */
 }
 .rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-gap: .5rem;
-    font-size: 2.5rem;
-    color: var(--yellow);
-    margin-bottom: 2rem;
+    display: flex; /* Aseta näyttötyyli */
+    justify-content: center; /* Keskitä vaakasuunnassa */
+    align-items: center; /* Keskitä pystysuunnassa */
+    grid-gap: .5rem; /* Aseta verkkoaukko */
+    font-size: 2.5rem; /* Aseta fonttikoko */
+    color: var(--gold); /* Aseta tekstiväri */
+    margin-bottom: 2rem; /* Aseta alareunaväli */
 }
+/* Aseta tähtien tyyli */
 .rating .star {
-    cursor: pointer;
+    cursor: pointer; /* Aseta osoitin */
 }
+/* Aseta aktiivisten tähtien animaatio */
 .rating .star.active {
-    opacity: 0;
-    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards; /* не могу пока понять. пропали звездочки после нажатия и проставления оценки*/
+    opacity: 0; /* Aseta läpinäkyvyys */
+    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;  /* Aseta animaatio */
 }
+/* Määritä tähtien animaatio */
 @keyframes animate {
     0% {
-        opacity: 0;
-        transform: scale(1);
+        opacity: 0; /* Aseta läpinäkyvyys */
+        transform: scale(1); /* Aseta skaala */
     }
     50% {
-        opacity: 1;
-        transform: scale(1.2);
+        opacity: 1; /* Aseta läpinäkyvyys */
+        transform: scale(1.2); /* Aseta skaala */
     }
     100% {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 1; /* Aseta läpinäkyvyys */
+        transform: scale(1); /* Aseta skaala */
     }
 }
+/* Tähtien hover-efekti */
 .rating .star:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aseta skaala */
 }
+/* Aseta tekstikentän tyyli */
 textarea {
-    width: 100%;
-    background:  var(--light);
-    padding: 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    resize: none; /* чтобы не увеличивать размер */
-    margin-bottom: .5rem;
+    width: 100%; /* Aseta leveys */
+    background:  var(--light); /* Aseta taustaväri */
+    padding: 2rem; /* Lisää täyttöä sisäpuolelle */
+    border-radius: .5rem; /* Aseta reunan pyöristys */
+    border: none; /* Poista reuna */
+    outline: none; /* Poista ääriviiva */
+    resize: none;  /* Poista muuttaminen */
+    margin-bottom: .7rem; /* Aseta alareunaväli */
 }
+/* Aseta painikeryhmän tyyli */
 .btn-group {
-    display: flex;
-    grid-gap: .5rem;
-    align-items: center;
+    display: flex; /* Aseta näyttötyyli */
+    grid-gap: .5rem; /* Aseta verkkoaukko */
+    align-items: center; /* Keskitä pystysuunnassa */
 }
+/* Aseta painikkeiden tyyli */
 .btn-group .btn {
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-    border: none; /* чтобы не выделять жирным края и обводить */
-    outline: none;
-    cursor: pointer;
-    font-size: .875rem;
-    font-weight: 500;
+    padding: .75rem 1rem; /* Aseta täyttöä */
+    border-radius: .5rem; /* Aseta reunan pyöristys */
+    border: none; /* Poista reuna */
+    outline: none; /* Poista ääriviiva */
+    cursor: pointer; /* Aseta osoitin */
+    font-size: .875rem; /* Aseta fonttikoko */
+    font-weight: 500; /* Aseta fontin vahvuus */
 }
+/* Aseta lähetyspainikkeen tyyli */
 .btn-group .btn.submit {
-    background: var(--black);
-    color: var(--white);
+    background: var(--gold); /* Aseta taustaväri */
+    color: var(--blue); /* Aseta tekstiväri */
 }
+/* Aseta lähetyspainikkeen hover-tilan tyyli */
 .btn-group .btn.submit:hover {
-    background:  var(--grey1);
+    background:  var(--light); /* Aseta taustaväri */
 }
+/* Aseta peruutuspainikkeen tyyli */
 .btn-group .btn.cancel {
-    background: var(--white);
-    color: var(--bllue);
+    background: var(--gold); /* Aseta taustaväri */
+    color: var(--blue); /* Aseta tekstiväri */
 }
+/* Aseta peruutuspainikkeen hover-tilan tyyli */
 .btn-group .btn.cancel:hover {
-    background: var(--light);
+    background: var(--light); /* Aseta taustaväri */
 }
+img{
+    position: absolute; /* Asettaa absoluuttisen sijoituksen */
+    top: 0; /* Asettaa yläreunan sijainnin */
+    display: block; /* Muuttaa kuvan blokkielementiksi */
+    margin: 0 auto; /* Automaattinen keskitys vaakasuunnassa */
+    width: 42%; /* Asettaa kuvan leveyden suhteessa kontaineriin */
+    height:9.3rem; /* Asettaa kuvan korkeuden */
+    border-radius: 10px; /* Pyöristää kuvan kulmat */
 
+}
