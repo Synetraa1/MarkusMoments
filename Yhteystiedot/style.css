@@ -19,6 +19,11 @@
   }
 }
 
+/*Taustaväri*/
+.tausta {
+  background-color: #000000;
+  }
+
 div.desc {
   padding: 15px; /* Asettaa sisennyksen kuvauksiin */
   text-align: center; /* Keskittää kuvauksen tekstisisällön */
@@ -57,9 +62,9 @@ div.desc a {
   display: block; /* Muuta linkit blokeiksi, jolloin ne vievät koko leveyden */
   color: #d4af37; /* Aseta linkkien väri */
   text-align: center; /* Keskitä tekstit */
-  padding: 28px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
+  padding: 24px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
   text-decoration: none; /* Poista alleviivaus */
-  font-size: 20px;
+  font-size: 20px; /* Aseta fontin koko */
 }
 
 /* Vaihda linkkien väriä hover-tilassa */
@@ -72,7 +77,6 @@ div.desc a {
 .topnav .icon {
   display: none; /* Piilota oletuksena */
 }
-
 /* Media query responsiivisuudelle pienillä näytöillä */
 @media screen and (max-width: 760px) {
   .topnav a:not(:first-child) {

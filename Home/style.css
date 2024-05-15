@@ -125,6 +125,7 @@ div.desc a {
 .topnav {
   background-color: #191919; /* Aseta taustaväri */
   overflow: hidden; /* Estä lapsielementtien näyttäminen yli navigaatiopalkin rajojen */
+  
 }
 
 /* Tyylittele linkit navigaatiopalkissa */

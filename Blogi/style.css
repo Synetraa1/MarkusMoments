@@ -22,9 +22,10 @@
   display: block; /* Muuta linkit blokeiksi, jolloin ne vievät koko leveyden */
   color: #d4af37; /* Aseta linkkien väri */
   text-align: center; /* Keskitä tekstit */
-  padding: 28px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
+  padding: 24px 24px; /* Lisää tyhjää tilaa ylä- ja alapuolelle sekä vasemmalle ja oikealle */
   text-decoration: none; /* Poista alleviivaus */
-  font-size: 20px
+  font-size: 20px;
+  font-family:Verdana;
 }
 
 /* Vaihda linkkien väriä hover-tilassa */
